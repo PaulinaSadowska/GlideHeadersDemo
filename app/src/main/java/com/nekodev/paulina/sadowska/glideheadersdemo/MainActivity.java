@@ -21,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void downloadImage() {
         Glide.with(this)
-                .load(IMAGE_SOURCE)
+                .load(Headers.getUrlWithHeaders(IMAGE_SOURCE))
                 .into(catImage);
     }
+
+
 }
