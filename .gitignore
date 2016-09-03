@@ -8,7 +8,6 @@
 .externalNativeBuild
 libs/
 
-proguard-rules.pro
 gradlew
 gradlew.bat
 gradle/wrapper
