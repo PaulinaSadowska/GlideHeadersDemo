@@ -31,6 +31,9 @@ public class GlideModuleWithHeaders implements GlideModule {
     private static class HeaderLoader extends BaseGlideUrlLoader<String> {
 
         private static final String AUTHORIZATION = "QWERTYUIOPASDFGHJKL";
+        private static final Headers REQUEST_HEADERS = new LazyHeaders.Builder()
+                .addHeader("Authorization", AUTHORIZATION)
+                .build();
 
         HeaderLoader(Context context) {
             super(context);
@@ -43,9 +46,7 @@ public class GlideModuleWithHeaders implements GlideModule {
 
         @Override
         protected Headers getHeaders(String model, int width, int height) {
-            return new LazyHeaders.Builder()
-                    .addHeader("Authorization", AUTHORIZATION)
-                    .build();
+            return REQUEST_HEADERS;
         }
 
         static class Factory implements ModelLoaderFactory<String, InputStream> {
