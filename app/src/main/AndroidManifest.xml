@@ -19,7 +19,7 @@
         </activity>
 
         <meta-data
-            android:name="com.nekodev.paulina.sadowska.glideheadersdemo.GlideModuleWithHeaders"
+            android:name="com.nekodev.paulina.sadowska.glideheadersdemo.glide.GlideModuleWithHeaders"
             android:value="GlideModule" />
 
     </application>
